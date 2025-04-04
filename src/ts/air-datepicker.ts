@@ -3,12 +3,12 @@ import localeRu from 'air-datepicker/locale/ru'
 import filtering from './filtering'
 import { touchDevice } from './utils'
 
-export type AirDatepickerCell = {
+type AirDatepickerCell = {
   date: Date
   cellType: string
 }
 
-export type AirDatepickerRenderCell = {
+type AirDatepickerRenderCell = {
   classes: string
   attrs: {
     'data-filtering-category': string

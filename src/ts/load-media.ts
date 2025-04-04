@@ -1,4 +1,4 @@
-export type MediaFile = HTMLImageElement | HTMLVideoElement
+type MediaFile = HTMLImageElement | HTMLVideoElement
 
 export default (): void => {
   const loads = document.querySelectorAll('*[data-load]') as NodeListOf<HTMLElement>

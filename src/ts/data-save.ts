@@ -1,10 +1,10 @@
-export type DataSave = { [index: string]: string }
+type DataSave = { [index: string]: string }
 
-export const checkingValue = (input: HTMLInputElement): boolean => {
+const checkingValue = (input: HTMLInputElement): boolean => {
   return input.dataset.input !== 'file' && input.dataset.input !== 'switch'
 }
 
-export const saveFormData = (id: string): void => {
+const saveFormData = (id: string): void => {
   const form = document.querySelector(`#${id}`) as HTMLFormElement
 
   if (!form) return

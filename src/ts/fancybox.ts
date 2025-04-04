@@ -3,7 +3,7 @@ import { createCalendar } from './air-datepicker'
 import filtering from './filtering'
 import imagePreview from './image-preview'
 
-export type FancyboxDialog = {
+type FancyboxDialog = {
   open: (src: string) => void
   notClosing: (src: string) => void
   close: () => void

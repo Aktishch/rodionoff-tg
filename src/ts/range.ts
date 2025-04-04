@@ -1,6 +1,6 @@
-export type Range = HTMLInputElement | HTMLOutputElement
+type Range = HTMLInputElement | HTMLOutputElement
 
-export type RangePosition = {
+type RangePosition = {
   size: number
   number: number
   input: HTMLInputElement
@@ -8,7 +8,7 @@ export type RangePosition = {
   bubble: HTMLOutputElement
 }
 
-export const getBubblesPosition = ({ size, number, input, progress, bubble }: RangePosition): void => {
+const getBubblesPosition = ({ size, number, input, progress, bubble }: RangePosition): void => {
   const percent: number = size / 100
   const half: number = size / 2
   const value: number = Number(input.value)

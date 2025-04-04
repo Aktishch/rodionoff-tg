@@ -1,6 +1,6 @@
 import { Coordinates, touchDevice } from './utils'
 
-export const setMovement = (event: MouseEvent): void => {
+const setMovement = (event: MouseEvent): void => {
   const item = (event.target as HTMLElement).closest('[data-movement]') as HTMLElement
 
   const coordinates: Coordinates = {

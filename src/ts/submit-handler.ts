@@ -1,7 +1,7 @@
 import { dialog } from './fancybox'
 import { validation } from './utils'
 
-export const formSubmitHandler = (event: Event): void => {
+const formSubmitHandler = (event: Event): void => {
   const form = event.target as HTMLFormElement
 
   switch (form.dataset.form) {

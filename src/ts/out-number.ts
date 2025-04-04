@@ -1,4 +1,4 @@
-export const setOutNumber = (section: HTMLElement): void => {
+const setOutNumber = (section: HTMLElement): void => {
   const items = section.querySelectorAll('*[data-number]') as NodeListOf<HTMLSpanElement>
 
   items.forEach((item: HTMLSpanElement): void => {
@@ -24,7 +24,7 @@ export const setOutNumber = (section: HTMLElement): void => {
   })
 }
 
-export const scrollToNumbers = (): void => {
+const scrollToNumbers = (): void => {
   const section = document.querySelector('*[data-section]') as HTMLElement
 
   if (section && window.screen.height >= section.getBoundingClientRect().top) {

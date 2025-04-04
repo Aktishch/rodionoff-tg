@@ -1,4 +1,4 @@
-export type QuizInput = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+type QuizInput = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
 
 export const checkQuizSlide = (slide: HTMLElement): void => {
   const quiz = slide.closest('[data-quiz]') as HTMLElement

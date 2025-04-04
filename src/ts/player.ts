@@ -1,24 +1,24 @@
 import { scrollbarHidden, scrollbarShow, timeFormat } from './utils'
 
-export type Playlist = {
+type Playlist = {
   artist: string
   song: string
   audio: string
   poster: string
 }
 
-export type Player = {
+type Player = {
   id: string
   playlist: Playlist[]
 }
 
-export type PlayerCondition = {
+type PlayerCondition = {
   status: string
   time: number
   index: number
 }
 
-export type PlayerTiming = {
+type PlayerTiming = {
   type: string
   time: HTMLSpanElement
 }
@@ -45,7 +45,7 @@ const playlist: Playlist[] = [
   },
 ]
 
-export const setPlayer = ({ id, playlist }: Player): void => {
+const setPlayer = ({ id, playlist }: Player): void => {
   const player = document.querySelector(`#${id}`) as HTMLElement
 
   if (!player) return
@@ -339,7 +339,7 @@ export const setPlayer = ({ id, playlist }: Player): void => {
   volume.addEventListener('click', mutedState as EventListener)
 }
 
-export const playOnlyOne = (event: Event): void => {
+const playOnlyOne = (event: Event): void => {
   const audios = document.querySelectorAll('audio') as NodeListOf<HTMLAudioElement>
 
   for (let i: number = 0; i < audios.length; i++) {

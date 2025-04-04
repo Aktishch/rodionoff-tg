@@ -1,18 +1,18 @@
-export const inputName = (event: Event): void => {
+const inputName = (event: Event): void => {
   const input = event.target as HTMLInputElement
   const regExp: RegExp = /[0-9.,!@#$%^&*()-=_+`~{}/?<>|'"]/
 
   if (input.value.match(regExp)) input.value = input.value.replace(regExp, '')
 }
 
-export const inputNumber = (event: Event): void => {
+const inputNumber = (event: Event): void => {
   const input = event.target as HTMLInputElement
   const regExp: RegExp = /[^0-9.]/g
 
   input.value = input.value.replace(regExp, '')
 }
 
-export const inputFloat = (event: Event): void => {
+const inputFloat = (event: Event): void => {
   const input = event.target as HTMLInputElement
 
   input.value = input.value.replace(/^\.|[^\d.]|\.(?=.*\.)|^0+(?=\d)/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ')

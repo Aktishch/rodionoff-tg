@@ -1,6 +1,6 @@
 import { Coordinates, scrolledPage } from './utils'
 
-export const setOffset = (element: HTMLElement): Coordinates => {
+const setOffset = (element: HTMLElement): Coordinates => {
   return {
     top: element.getBoundingClientRect().top + scrolledPage().top,
     left: element.getBoundingClientRect().left + scrolledPage().left,

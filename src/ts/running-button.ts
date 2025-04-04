@@ -1,11 +1,11 @@
 import { Coordinates } from './utils'
 
-export type RandomPosition = {
+type RandomPosition = {
   min: number
   max: number
 }
 
-export const randomBtnPosition = ({ min, max }: RandomPosition): number => {
+const randomBtnPosition = ({ min, max }: RandomPosition): number => {
   return Math.floor(min + Math.random() * (max - min + 1))
 }
 

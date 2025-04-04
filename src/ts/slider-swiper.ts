@@ -3,7 +3,7 @@ import { Autoplay, EffectCoverflow, Grid, Navigation, Pagination, Scrollbar, Thu
 import { checkQuizSlide } from './quiz'
 import { media } from './utils'
 
-export interface QuizSwiper extends Swiper {
+interface QuizSwiper extends Swiper {
   visibleSlides: [HTMLDivElement]
 }
 
@@ -17,7 +17,7 @@ Swiper.use([Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectCov
 Swiper.defaults.touchStartPreventDefault = false
 window.Swiper = Swiper
 
-export const createGallerySlider = (): void => {
+const createGallerySlider = (): void => {
   const slider = document.querySelector('*[data-slider="gallery"]') as HTMLDivElement
 
   if (!slider) return
@@ -60,7 +60,7 @@ export const createGallerySlider = (): void => {
   }) as Swiper
 }
 
-export const createProductsSlider = (): void => {
+const createProductsSlider = (): void => {
   const slider = document.querySelector('*[data-slider="products"]') as HTMLDivElement
 
   if (!slider) return
@@ -99,7 +99,7 @@ export const createProductsSlider = (): void => {
   }) as Swiper
 }
 
-export const createQuizSlider = (): void => {
+const createQuizSlider = (): void => {
   const slider = document.querySelector('*[data-slider="quiz"]') as HTMLDivElement
 
   if (!slider) return
@@ -145,7 +145,7 @@ export const createQuizSlider = (): void => {
   }) as Swiper
 }
 
-export const createDescriptionSlider = (): void => {
+const createDescriptionSlider = (): void => {
   const slider = document.querySelector('*[data-slider="description"]') as HTMLDivElement
 
   if (!slider) return

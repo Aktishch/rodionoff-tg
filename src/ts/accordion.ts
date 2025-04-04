@@ -1,4 +1,4 @@
-export const createAccordion = (accordion: HTMLDivElement): void => {
+const createAccordion = (accordion: HTMLDivElement): void => {
   const toggle = accordion.querySelector('*[data-accordion-toggle]') as HTMLDivElement | HTMLButtonElement
   const content = accordion.querySelector('*[data-accordion-content]') as HTMLDivElement
   let timeOut: NodeJS.Timeout

@@ -1,6 +1,6 @@
 import { touchDevice } from './utils'
 
-export type PalleteColors = {
+type PalleteColors = {
   [index: string]: {
     hex: string
     rgb: string

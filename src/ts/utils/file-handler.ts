@@ -1,4 +1,4 @@
-export type FileHandler = {
+type FileHandler = {
   error: HTMLSpanElement
   file: File
 }

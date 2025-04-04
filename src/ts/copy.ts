@@ -1,4 +1,4 @@
-export const copyText = (event: Event): void => {
+const copyText = (event: Event): void => {
   const button = event.target as HTMLButtonElement
   const copy = button.closest('[data-copy]') as HTMLDivElement
   const result = copy.querySelector('[data-copy-result]') as HTMLSpanElement

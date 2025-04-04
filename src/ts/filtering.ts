@@ -1,17 +1,17 @@
 import { scrollToElement } from './scroll-to'
 
-export type FilterCardsShowing = {
+type FilterCardsShowing = {
   condition: boolean
   item: HTMLDivElement
 }
 
-export type FilterHandler = {
+type FilterHandler = {
   name: string
   cards: NodeListOf<HTMLDivElement>
   plug: HTMLDivElement
 }
 
-export const filterCardsShowing = ({ condition, item }: FilterCardsShowing): void => {
+const filterCardsShowing = ({ condition, item }: FilterCardsShowing): void => {
   if (condition) {
     item.classList.add('hidden', 'translate-y-10', 'opacity-0')
   } else {
@@ -20,7 +20,7 @@ export const filterCardsShowing = ({ condition, item }: FilterCardsShowing): voi
   }
 }
 
-export const filterHandler = ({ name, cards, plug }: FilterHandler): void => {
+const filterHandler = ({ name, cards, plug }: FilterHandler): void => {
   let hidden: number = 0
 
   cards.forEach((card: HTMLDivElement): void => {
