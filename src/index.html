@@ -262,28 +262,36 @@
         <form class="flex flex-col w-full max-w-sm gap-5 mx-auto" data-form="submit" data-datepicker id="data-save">
           <input type="hidden" value="Главная" name="theme">
           <label data-label>
-            <h5 class="mb-3 font-medium text-xl/none">Name</h5>
+            <h5 class="mb-3 font-medium text-xl/none">
+              Name
+            </h5>
             <div class="relative">
               <input class="input input-gray input-lg" data-input="name" type="text" placeholder="Name" name="name">
               <%= error({text: 'Введите ваше имя'}) %>
             </div>
           </label>
           <label data-label>
-            <h5 class="mb-3 font-medium text-xl/none">Telephone</h5>
+            <h5 class="mb-3 font-medium text-xl/none">
+              Telephone
+            </h5>
             <div class="relative">
               <input class="input input-gray input-lg" data-input="tel" type="tel" placeholder="+7 (___) ___-__-__" name="tel">
               <%= error({text: 'Введите ваш номер'}) %>
             </div>
           </label>
           <label data-label>
-            <h5 class="mb-3 font-medium text-xl/none">Email</h5>
+            <h5 class="mb-3 font-medium text-xl/none">
+              Email
+            </h5>
             <div class="relative">
               <input class="input input-gray input-lg" data-input="email" type="text" placeholder="_@_._" name="email">
               <%= error({text: 'Введите корректный адрес'}) %>
             </div>
           </label>
           <div>
-            <h5 class="mb-3 font-medium text-xl/none">Date</h5>
+            <h5 class="mb-3 font-medium text-xl/none">
+              Date
+            </h5>
             <div class="flex items-center justify-between">
               <div class="relative grow" data-label>
                 <input class="rounded-r-none input input-gray input-lg" data-input="min" data-position="top left" type="text" name="check-in">
@@ -299,14 +307,18 @@
             </div>
           </div>
           <label data-label>
-            <h5 class="mb-3 font-medium text-xl/none">Number</h5>
+            <h5 class="mb-3 font-medium text-xl/none">
+              Number
+            </h5>
             <div class="relative">
               <input class="input input-gray input-lg" data-input="float" type="text" placeholder="12345" name="number">
               <%= error({text: 'Введите число'}) %>
             </div>
           </label>
           <label data-label>
-            <h5 class="mb-3 font-medium text-xl/none">Select</h5>
+            <h5 class="mb-3 font-medium text-xl/none">
+              Select
+            </h5>
             <div class="relative">
               <select class="input input-gray input-lg" data-input="select" name="select">
                 <option value="empty" disabled hidden selected>Select</option>
@@ -322,7 +334,9 @@
             </div>
           </label>
           <label data-label>
-            <h5 class="mb-3 font-medium text-xl/none">Reviews</h5>
+            <h5 class="mb-3 font-medium text-xl/none">
+              Reviews
+            </h5>
             <div class="relative">
               <textarea class="h-48 input input-gray input-lg" data-input="text" type="text" placeholder="Reviews" name="text"></textarea>
               <%= error({text: 'Заполните это поле'}) %>

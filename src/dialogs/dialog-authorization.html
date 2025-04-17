@@ -7,14 +7,18 @@
   <form class="flex flex-col gap-5" data-form action="primary.html">
     <input type="hidden" value="Авторизация" name="theme">
     <label data-label>
-      <h5 class="mb-3 font-medium text-xl/none">Telephone</h5>
+      <h5 class="mb-3 font-medium text-xl/none">
+        Telephone
+      </h5>
       <div class="relative">
         <input class="input input-gray input-md" data-input="tel" type="tel" placeholder="+7 (___) ___-__-__" name="tel">
         <%= error({text: 'Введите ваш номер'}) %>
       </div>
     </label>
     <label data-label>
-      <h5 class="mb-3 font-medium text-xl/none">Password</h5>
+      <h5 class="mb-3 font-medium text-xl/none">
+        Password
+      </h5>
       <div class="relative">
         <input class="pr-10 input input-gray input-md" data-input="password" type="password" placeholder="********" autocomplete="new-password" name="password">
         <%= error({text: 'Введите пароль'}) %>
