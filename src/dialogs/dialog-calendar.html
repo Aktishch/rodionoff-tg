@@ -2,18 +2,22 @@
   var icon = _.template(require('../components/icon.html').default)
   var picture = _.template(require('../components/picture.html').default)
   var loader = _.template(require('../components/loader.html').default)({icon})
+  var preloader = require('../components/preloader.html').default
 %>
 
 <dialog class="w-full max-w-3xl px-5 py-10 text-black bg-white dark:bg-black dark:text-white rounded-xl">
   <div class="flex flex-wrap items-center justify-between gap-5" data-filtering="calendar">
     <div class="relative">
-      <%= loader %>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <%= preloader %>
+      </div>
       <div class="relative" id="calendar"></div>
     </div>
     <div class="w-full md:w-1/2">
-      <% _.forEach((['date-5-1', 'date-7-1', 'date-10-2']), (item) => { %>
-      <div class="w-full filtering-card pack pack-md bg-gray rounded-2xl" data-load data-filtering-card="calendar" data-filtering-value="<%= item %>">
-        <%= picture({src: 'img/pictures/town-grey', format: 'jpg', className: 'pack-image image rounded-inherit', data: 'data-media'}) %>
+      <% _.forEach((['date-5-4', 'date-7-4', 'date-10-5']), (item) => { %>
+      <div class="w-full filtering-card pack pack-md bg-gray rounded-2xl" data-filtering-card="calendar" data-filtering-value="<%= item %>">
+        <%= loader %>
+        <%= picture({src: 'img/pictures/town-grey', format: 'jpg', className: 'pack-image image rounded-inherit', data: null}) %>
       </div>
       <% }) %>
     </div>

@@ -82,7 +82,6 @@ window.addEventListener('DOMContentLoaded', ((): void => {
   inputs()
   inverted()
   listing()
-  loadMedia()
   menu()
   movement()
   outNumber()
@@ -116,3 +115,5 @@ window.addEventListener('DOMContentLoaded', ((): void => {
   writeText()
   yandexMap()
 }) as EventListener)
+
+window.addEventListener('load', loadMedia as EventListener)

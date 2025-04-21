@@ -1,16 +1,9 @@
-type MediaFile = HTMLImageElement | HTMLVideoElement
-
 export default (): void => {
-  const loads = document.querySelectorAll('*[data-load]') as NodeListOf<HTMLElement>
+  const loaders = document.querySelectorAll('*[data-loader]') as NodeListOf<HTMLDivElement>
 
-  loads.forEach((load: HTMLElement): void => {
-    if (!load) return
+  loaders.forEach((loader: HTMLDivElement) => {
+    if (!loader) return
 
-    const loader = load.querySelector('*[data-loader]') as HTMLDivElement
-    const media = load.querySelector('*[data-media]') as MediaFile
-
-    media.addEventListener('load', ((): void => {
-      loader.remove()
-    }) as EventListener)
+    loader.remove()
   })
 }

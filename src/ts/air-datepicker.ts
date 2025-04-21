@@ -16,7 +16,7 @@ type AirDatepickerRenderCell = {
   }
 }
 
-const excludeDates: number[] = [+new Date(2025, 0, 5), +new Date(2025, 0, 7), +new Date(2025, 1, 10)]
+const excludeDates: number[] = [+new Date(2025, 3, 5), +new Date(2025, 3, 7), +new Date(2025, 4, 10)]
 
 declare global {
   interface Window {

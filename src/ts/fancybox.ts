@@ -2,6 +2,7 @@ import { Fancybox } from '@fancyapps/ui'
 import { createCalendar } from './air-datepicker'
 import filtering from './filtering'
 import imagePreview from './image-preview'
+import loadMedia from './load-media'
 
 type FancyboxDialog = {
   open: (src: string) => void
@@ -33,6 +34,9 @@ export const dialog: FancyboxDialog = {
       ],
       {
         dragToClose: false,
+        on: {
+          done: (): void => loadMedia(),
+        },
       }
     )
   },
@@ -48,6 +52,9 @@ export const dialog: FancyboxDialog = {
         dragToClose: false,
         closeButton: false,
         backdropClick: false,
+        on: {
+          done: (): void => loadMedia(),
+        },
       }
     )
   },
@@ -61,6 +68,9 @@ export default (): void => {
 
   window.Fancybox.bind('[data-fancybox-dialog]', {
     dragToClose: false,
+    on: {
+      done: (): void => loadMedia(),
+    },
   })
 
   window.Fancybox.bind('[data-fancybox-avatar]', {
@@ -76,6 +86,7 @@ export default (): void => {
       done: (): void => {
         createCalendar()
         filtering()
+        loadMedia()
       },
     },
   })
