@@ -294,11 +294,11 @@
             </h5>
             <div class="flex items-center justify-between">
               <div class="relative grow" data-label>
-                <input class="rounded-r-none input input-gray input-lg" data-input="min" data-position="top left" type="text" name="check-in">
+                <input class="rounded-r-none input input-gray input-lg" data-input="date" data-datepicker-min data-position="top left" type="text" name="check-in">
                 <%= error({text: 'Укажите дату'}) %>
               </div>
               <div class="relative grow" data-label>
-                <input class="rounded-l-none input input-gray input-lg" data-input="max" type="text" name="check-out">
+                <input class="rounded-l-none input input-gray input-lg" data-input="date" data-datepicker-max type="text" name="check-out">
                 <div class="absolute top-0 bottom-0 right-0 flex items-center justify-center h-full pointer-events-none w-11">
                   <%= icon({id: 'calendar', className: 'icon text-xl', data: null}) %>
                 </div>

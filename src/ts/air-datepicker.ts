@@ -67,8 +67,8 @@ export default (): void => {
   datepickers.forEach((datepicker: HTMLFormElement): void => {
     if (!datepicker) return
 
-    const inputMin = datepicker.querySelector('*[data-input="min"]') as HTMLInputElement
-    const inputMax = datepicker.querySelector('*[data-input="max"]') as HTMLInputElement
+    const inputMin = datepicker.querySelector('*[data-datepicker-min]') as HTMLInputElement
+    const inputMax = datepicker.querySelector('*[data-datepicker-max]') as HTMLInputElement
 
     const min = new window.AirDatepicker(inputMin, {
       onSelect({ date }) {

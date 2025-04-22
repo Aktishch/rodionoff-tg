@@ -1,10 +1,7 @@
 import { fileHandler } from './file-handler'
+import { regularExpressions } from './regular-expressions'
 
 type FormLabel = HTMLLabelElement | HTMLDivElement
-
-const emailFormat = (value: string): boolean => {
-  return !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,8})+$/.test(value)
-}
 
 export const validation = (form: HTMLFormElement): boolean => {
   const labels = form.querySelectorAll('*[data-label]') as NodeListOf<FormLabel>
@@ -67,7 +64,25 @@ export const validation = (form: HTMLFormElement): boolean => {
       }
 
       case 'email': {
-        if (emailFormat(input.value)) getError()
+        if (!regularExpressions.email.test(input.value)) getError()
+        break
+      }
+
+      case 'date': {
+        if (!regularExpressions.date.test(input.value)) getError()
+
+        break
+      }
+
+      case 'login': {
+        if (!regularExpressions.login.test(input.value)) getError()
+
+        break
+      }
+
+      case 'password': {
+        if (!regularExpressions.password.test(input.value)) getError()
+
         break
       }
 
