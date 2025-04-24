@@ -1,23 +1,20 @@
-import { regularExpressions } from './utils'
-
 const inputName = (event: Event): void => {
   const input = event.target as HTMLInputElement
+  const regExp: RegExp = /[0-9.,!@#$%^&*()-=_+`~{}/?<>|'"]/
 
-  if (input.value.match(regularExpressions.name)) input.value = input.value.replace(regularExpressions.name, '')
+  if (input.value.match(regExp)) input.value = input.value.replace(regExp, '')
 }
 
 const inputNumber = (event: Event): void => {
   const input = event.target as HTMLInputElement
 
-  input.value = input.value.replace(regularExpressions.number, '')
+  input.value = input.value.replace(/[^0-9.]/g, '')
 }
 
 const inputFloat = (event: Event): void => {
   const input = event.target as HTMLInputElement
 
-  input.value = input.value
-    .replace(regularExpressions.numberSeparator, '')
-    .replace(regularExpressions.floatingPoint, ' ')
+  input.value = input.value.replace(/^\.|[^\d.]|\.(?=.*\.)|^0+(?=\d)/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
 }
 
 export default (): void => {

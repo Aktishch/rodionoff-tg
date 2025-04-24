@@ -1,5 +1,4 @@
 import { fileHandler } from './file-handler'
-import { regularExpressions } from './regular-expressions'
 
 type FormLabel = HTMLLabelElement | HTMLDivElement
 
@@ -64,24 +63,18 @@ export const validation = (form: HTMLFormElement): boolean => {
       }
 
       case 'email': {
-        if (!regularExpressions.email.test(input.value)) getError()
-        break
-      }
-
-      case 'date': {
-        if (!regularExpressions.date.test(input.value)) getError()
-
+        if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,8})+$/.test(input.value)) getError()
         break
       }
 
       case 'login': {
-        if (!regularExpressions.login.test(input.value)) getError()
+        if (!/^[a-zA-Z0-9]+$/.test(input.value)) getError()
 
         break
       }
 
       case 'password': {
-        if (!regularExpressions.password.test(input.value)) getError()
+        if (!/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/.test(input.value)) getError()
 
         break
       }
