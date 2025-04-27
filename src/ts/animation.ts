@@ -20,9 +20,7 @@ export const setAnimation = (): void => {
 
     if (point > window.innerHeight) point = window.innerHeight - window.innerHeight / screenPosition
 
-    scrolledPage().top > offsetTop - point && scrolledPage().top < offsetTop + height
-      ? (item.dataset.anim = 'show')
-      : (item.dataset.anim = '')
+    if (scrolledPage().top > offsetTop - point && scrolledPage().top < offsetTop + height) item.dataset.anim = 'show'
   })
 }
 

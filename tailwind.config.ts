@@ -8,7 +8,6 @@ const createColor = (variable: string): any => {
 
 module.exports = {
   content: ['./src/**/*.html', './src/ts/**/*.ts'],
-  darkMode: ['class', '[data-theme="dark"]'],
   corePlugins: {
     container: false,
   },
@@ -25,12 +24,12 @@ module.exports = {
       xxl: '2499.98px',
     },
     constants: {
-      xs: 28,
-      sm: 36,
-      md: 40,
-      lg: 45,
-      xl: 56,
-      xxl: 64,
+      xs: 36,
+      sm: 45,
+      md: 54,
+      lg: 60,
+      xl: 70,
+      xxl: 80,
     },
     colors: {
       transparent: 'transparent',
@@ -48,20 +47,8 @@ module.exports = {
       white: {
         DEFAULT: createColor('white'),
       },
-      gray: {
-        DEFAULT: createColor('gray'),
-      },
       grey: {
         DEFAULT: createColor('grey'),
-      },
-      dark: {
-        DEFAULT: createColor('dark'),
-      },
-      red: {
-        DEFAULT: createColor('red'),
-      },
-      green: {
-        DEFAULT: createColor('green'),
       },
     },
     fontFamily: {
@@ -111,11 +98,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('./plugins/pack'),
-    require('./plugins/input'),
-    require('./plugins/button'),
-    require('./plugins/animation'),
-    require('./plugins/pointer-coarse'),
-  ],
+  plugins: [require('./plugins/pack'), require('./plugins/button'), require('./plugins/animation')],
 } satisfies Config

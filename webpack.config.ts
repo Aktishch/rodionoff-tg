@@ -59,11 +59,6 @@ module.exports = {
     new CssMinimizerPlugin(),
     new MiniCssExtractPlugin({ filename: 'css/style.css' }),
     ...generatePlugins({ templateDir: 'src', script: 'head', src: '' }),
-    ...generatePlugins({
-      templateDir: 'src/dialogs',
-      script: false,
-      src: 'dialogs/',
-    }),
     new CopyPlugin({
       patterns: [
         {
